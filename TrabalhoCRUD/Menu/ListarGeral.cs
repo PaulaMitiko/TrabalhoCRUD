@@ -12,7 +12,8 @@ namespace TrabalhoCRUD.Menu
             {
                 case 1:
                     var funcionarios = context.Funcionarios;
-                    Console.WriteLine("Funcionários");
+                    Console.WriteLine("FUNCIONÁRIOS");
+                    Console.WriteLine("===================================================================\n");
                     Console.Write("ID".PadRight(4));
                     Console.Write("Lotação  ");
                     Console.Write("Nome".PadRight(32));
@@ -27,8 +28,7 @@ namespace TrabalhoCRUD.Menu
                         Console.Write($"{f.Id}".PadRight(4));
                         Console.Write($"{f.IdCentroDistribuicao}".PadRight(9));
                         Console.Write($"{f.Nome}".PadRight(32));
-                        string cpf = f.Cpf.Insert(4, ".").Insert(8, ".").Insert(12, "-");
-                        Console.Write($"{cpf}".PadRight(16));
+                        Console.Write($"{f.Cpf}".PadRight(16));
                         Console.Write($"{f.DataNascimento}".PadRight(20));
                         Console.Write($"{f.Funcao}".PadRight(22));
                         Console.Write($"{f.Telefone}".PadRight(22));
@@ -38,7 +38,8 @@ namespace TrabalhoCRUD.Menu
                     break;
                 case 2:
                     var centrosDistribuicao = context.CentrosDistribuicao;
-                    Console.WriteLine("Centros de Distribuição");
+                    Console.WriteLine("CENTROS DE DISTRIBUIÇÃO");
+                    Console.WriteLine("===================================================================\n");
                     Console.Write("ID".PadRight(4));
                     Console.Write("CNPJ".PadRight(20));
                     Console.Write("Razao Social".PadRight(32));
@@ -48,8 +49,7 @@ namespace TrabalhoCRUD.Menu
                     foreach (var c in centrosDistribuicao)
                     {
                         Console.Write($"{c.Id}".PadRight(4));
-                        string cnpj = c.Cnpj.Insert(3, ".").Insert(7, ".").Insert(11,"/").Insert(16,"-");
-                        Console.Write($"{cnpj}  ");
+                        Console.Write($"{c.Cnpj}  ");
                         Console.Write($"{c.RazaoSocial}  ".PadRight(32));
                         Console.Write($"{c.Telefone}  ".PadRight(22));
                         Console.Write($"{c.Tipo}  ".PadRight(22));
@@ -58,7 +58,8 @@ namespace TrabalhoCRUD.Menu
                     break;
                 case 3:
                     var patrimonios = context.Patrimonios;
-                    Console.WriteLine("Patrimônios");
+                    Console.WriteLine("PATRIMÔNIOS");
+                    Console.WriteLine("===================================================================\n");
                     Console.Write("ID".PadRight(4));
                     Console.Write("Lotação".PadRight(9));
                     Console.Write("Equipamento".PadRight(32));

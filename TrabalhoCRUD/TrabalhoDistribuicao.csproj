@@ -53,6 +53,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Menu\AlterarCampo.cs" />
+    <Compile Include="Menu\AlterarLinha.cs" />
+    <Compile Include="Menu\Excluir.cs" />
+    <Compile Include="Menu\Inserir.cs" />
+    <Compile Include="Menu\ListarDeDois.cs" />
     <Compile Include="Menu\ListarGeral.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
